@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@250&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+section{ /*Esta sentencia es para el color de fondo*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    /*El background es por mientras*/
+    /*background: rgb(199, 24, 24);*/
+    background: url('../img/back.jpg');/*Se le tiene que poner .. para decir que la imagen esta fuera de la carpeta css */
+    background-position: center;
+    background-size: cover;
+}
+.form-box{ /*Esta sentencia es para el cuadro donde se hara el difuminado */
+    position: relative;
+    width: 400px;
+    height: 450px;
+    /*El backgroud es por mientras */
+    /*background: red;*/
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{ /*Esta sentecia es para el texto de Iniciar Sesion */
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+.inputbox{ /*Esta sentencia es para las lineas donde se ingresa user y password */
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+.inputbox label{ /*Esta sentencia es para la palabra usuario y contraseña */
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+.inputbox input{ /*Esta sentencia es para el cuadro donde van a escribir user y pass */
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+.inputbox ion-icon{ /*Esta sentencia es para los iconos */
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+.forget{ /*Desde la lunea 68 hasta 84 es para el Recuerdame y Recuperar Contraseña */
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.forget label input{ 
+    margin-right: 3px;
+}
+.forget label a{ 
+    color: #fff;
+    text-decoration: none;
+}
+.forget label a:hover{
+    text-decoration: underline;
+}
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+.error{
+    background-color: rgb(175,74,74);
+    color: black;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    margin: 20px auto;
+}
